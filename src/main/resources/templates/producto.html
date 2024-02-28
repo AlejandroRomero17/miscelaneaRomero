@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+            background-color: #f4f8ff !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            box-sizing: border-box !important;
+            animation: fadeIn 0.5s ease-in-out !important;
+        }
+
+        h1 {
+            text-align: center !important;
+            color: #3498db !important;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: slideIn 0.5s ease-in-out !important;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        th {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        tr:hover {
+            background-color: #ecf0f1;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+    </style>
+    <title>Productos</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Productos</h1>
+        <table>
+            <tr>
+                <th>Codigo</th>
+                <th>Nombre</th>
+                <th>Precio Compra</th>
+                <th>Precio Venta</th>
+                <th>Categoria</th>
+                <th>Proveedor</th>
+            </tr>
+            <tr th:each="producto :${productos}">
+                <td th:text="${producto.codigo_producto}"></td>
+                <td th:text="${producto.nombre}"></td>
+                <td th:text="${producto.precio_compra}"></td>
+                <td th:text="${producto.precio_venta}"></td>
+                <td th:text="${producto.categoria}"></td>
+                <td th:text="${producto.proveedor}"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

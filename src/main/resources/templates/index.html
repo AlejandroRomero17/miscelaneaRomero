@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda - Servicios</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            padding: 0 8%;
+        }
+
+        .container h1 {
+            text-align: center;
+            padding-top: 10%;
+            margin-bottom: 60px;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .container h1::after {
+            content: '';
+            background: #303ef7;
+            width: 100px;
+            height: 5px;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translate(-50%);
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+            gap: 30px;
+        }
+
+        .service {
+            text-align: center;
+            padding: 25px 10px;
+            border-radius:5px;
+            font-size: 14px;
+            cursor: pointer;
+            background: transparent;
+            transition: transform 0.5s, background 0.5s;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .service i {
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: #303ef7;
+        }
+
+        .service h2 {
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .service p {
+            color: #555;
+        }
+
+        .service:hover {
+            background: #303ef7;
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        .service:hover i {
+            color: #fff;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/dee51e584b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Bienvenido a la Miscelanea Romero</h1>
+        <div class="row">
+            <a href="/miscelanea/productos" class="service">
+                <i class="fas fa-shopping-cart"></i>
+                <h2>Productos</h2>
+                <p>Explora nuestra variedad de productos y encuentra lo que necesitas para ti y tu hogar.</p>
+            </a>
+            <a href="/miscelanea/ventas" class="service">
+                <i class="fas fa-cash-register"></i>
+                <h2>Ventas</h2>
+                <p>Consulta y realiza seguimiento de las ventas realizadas en nuestra tienda.</p>
+            </a>
+            <a href="/miscelanea/empleados" class="service">
+                <i class="fas fa-user-tie"></i>
+                <h2>Empleados</h2>
+                <p>Conoce a nuestro equipo dedicado que está listo para ayudarte en tu experiencia de compra.</p>
+            </a>
+            <a href="/miscelanea/proveedores" class="service">
+                <i class="fas fa-truck"></i>
+                <h2>Proveedores</h2>
+                <p>Descubre a nuestros proveedores confiables que nos abastecen con productos de calidad.</p>
+            </a>
+            <a href="/miscelanea/clientes" class="service">
+                <i class="fas fa-users"></i>
+                <h2>Clientes</h2>
+                <p>Conoce a nuestra comunidad de clientes y descubre ofertas exclusivas.</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

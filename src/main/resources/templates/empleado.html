@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f8ff;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        h1 {
+            text-align: center;
+            color: #3498db;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: slideIn 0.5s ease-in-out;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        th {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        tr:hover {
+            background-color: #ecf0f1;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+    </style>
+    <title>Empleados</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Empleados</h1>
+        <table>
+            <tr>
+                <th>Codigo Empleado</th>
+                <th>Nombre</th>
+                <th>Apellido Paterno</th>
+                <th>Apellido Materno</th>
+                <th>Horario</th>
+                <th>Puesto</th>
+            </tr>
+            <tr th:each="empleado :${empleados}">
+                <td th:text="${empleado.codigo_empleado}"></td>
+                <td th:text="${empleado.nombre}"></td>
+                <td th:text="${empleado.apellido_paterno}"></td>
+                <td th:text="${empleado.apellido_materno}"></td>
+                <td th:text="${empleado.horario}"></td>
+                <td th:text="${empleado.puesto}"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
