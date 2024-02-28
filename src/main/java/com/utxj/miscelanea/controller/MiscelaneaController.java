@@ -51,7 +51,8 @@ public class MiscelaneaController {
     public String proveedor(Model modelo) {
         List<proveedor> proveedores = new ArrayList<proveedor>();
         proveedores
-                .add(new proveedor(111, "Yulisa Vazquez", "09:00-17:00", "Samsung", "Calle Principal 123", "1234567890"));
+                .add(new proveedor(111, "Yulisa Vazquez", "09:00-17:00", "Samsung", "Calle Principal 123",
+                        "1234567890"));
         proveedores.add(
                 new proveedor(112, "Joan Salas", "08:00-18:00", "Dell", "Avenida Secundaria 456", "2345678901"));
         proveedores.add(
@@ -59,10 +60,10 @@ public class MiscelaneaController {
         proveedores.add(
                 new proveedor(114, "Javier Prades", "09:30-19:30", "Canon", "Avenida Tecnológica 101", "4567890123"));
         proveedores.add(
-                new proveedor(115, "Alvaro Vazquez", "08:00-20:00", "LG", "Calle de la Tecnología 202", "5678901234"));
+                new proveedor(3, "Alvaro Vazquez", "08:00-20:00", "LG", "Calle de la Tecnología 202", "5678901234"));
         proveedores
-                .add(new proveedor(116, "Ana Valdez", "07:30-17:30", "Sony", "Plaza de la Innovación 303", "6789012345"));
-
+                .add(new proveedor(36, "Ana Valdez", "07:30-17:30", "Sony", "Plaza de la Innovación 303",
+                        "6789012345"));
         modelo.addAttribute("proveedores", proveedores);
         return "proveedor";
     }
