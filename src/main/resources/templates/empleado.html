@@ -70,6 +70,16 @@
                 transform: translateY(0);
             }
         }
+        .back-button {
+            display: block;
+            margin-top: 20px;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            background-color: #3498db;
+            border-radius: 5px;
+        }
     </style>
     <title>Empleados</title>
 </head>
@@ -94,6 +104,8 @@
                 <td th:text="${empleado.puesto}"></td>
             </tr>
         </table>
+        <a href="/miscelanea" class="back-button">Regresar al Menú</a>
+
     </div>
 </body>
 </html>
